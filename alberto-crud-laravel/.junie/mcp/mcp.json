@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "/usr/bin/php8.3",
+            "args": [
+                "/home/alumno/laravel/alberto-crud-laravel/alberto-crud-laravel/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
