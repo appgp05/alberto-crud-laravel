@@ -3,6 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "local": "concurrently \"php artisan serve\" \"npm run dev\" \"docker compose up -d\"",
         "build": "vite build",
         "dev": "vite"
     },
