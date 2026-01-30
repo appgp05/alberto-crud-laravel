@@ -19,7 +19,11 @@
                         <td>{{ $project->description }}</td>
                         <td>{{ $project->creation_date }}</td>
                         <td>{{ $project->end_date }}</td>
-                        <td><button class="btn btn-warning">{{__("Modificar")}}</button></td>
+                        <td>
+                            <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning">
+                                {{ __("Modificar") }}
+                            </a>
+                        </td>
                         <td>
                             <form action="{{ route('projects.destroy', $project->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro?')">
                                 @csrf
