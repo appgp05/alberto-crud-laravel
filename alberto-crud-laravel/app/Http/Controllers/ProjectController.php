@@ -13,6 +13,10 @@ class ProjectController extends Controller
     public function index()
     {
         //
+        $projects = Project::all();
+        $fields = $projects->first()->getFillable();
+        array_unshift($fields, 'id');
+        return view('projects-list', compact('fields','projects'));
     }
 
     /**
@@ -61,5 +65,9 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         //
+        $project->delete();
+
+        return redirect()->route('projects-list')->with('status', 'Proyecto eliminado con éxito');
+
     }
 }
