@@ -9,6 +9,8 @@
 <body>
     <x-layouts.header></x-layouts.header>
     <x-layouts.nav></x-layouts.nav>
-    {{$slot}}
+    <div class="w-full flex justify-center">
+        {{$slot}}
+    </div>
 </body>
 </html>

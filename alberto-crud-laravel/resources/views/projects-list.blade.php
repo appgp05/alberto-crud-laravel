@@ -1,7 +1,9 @@
 <x-layouts.layout>
     <div class="overflow-x-auto">
+        <a href="{{ route('projects.create') }}" class="btn btn-success w-full">
+            <button>{{__("Crear proyecto")}}</button>
+        </a>
         <table class="table">
-            <!-- head -->
             <thead>
             <tr>
                 @foreach($fields as $field)

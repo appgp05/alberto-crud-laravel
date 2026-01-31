@@ -11,10 +11,13 @@
             </form>
         @endguest
         @auth()
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="btn btn-secondary">{{__("Cerrar sesión")}}</button>
-            </form>
+            <div class="flex items-center justify-center gap-5">
+                Usuario: {{auth()->user()->name}}
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-secondary">{{__("Cerrar sesión")}}</button>
+                </form>
+            </div>
         @endauth
     </div>
 </div>
