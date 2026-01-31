@@ -1,3 +1,3 @@
 <x-layouts.layout>
-    LLego a home, {{session('locale')}}
+    Bienvenido a nuestra página, {{auth()->user()->name}}
 </x-layouts.layout>
